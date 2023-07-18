@@ -14,8 +14,7 @@ const Layout = ({ children }) => {
     <div
       className={`page bg-img text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
       style={{
-        backgroundImage:
-          "linear-gradient(to bottom, black, rgba(0, 0, 0, 0.73)), url(./bg.jpg)",
+        backgroundImage: "url(./bg.jpg)",
         backgroundPosition: "center",
       }}
     >
