@@ -9,9 +9,9 @@ const Home = () => {
   const [typedText, setTypedText] = useState("");
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const sentences = [
-    "Engineering The Future\nOne Line At A Time.",
-    "Creating Innovative Solutions\nWith Cutting-Edge Technology.",
-    "Delivering Impactful Results\nFor a Better Tomorrow.",
+    "Empowering the Digital Frontier.\nCustom Software Development Excellence...",
+    "Navigating Success Together.\nAccelerating Growth through Marketing...",
+    "Safeguarding Your Digital World.\nFortifying Cybersecurity Peace of Mind...",
   ];
 
   useEffect(() => {
@@ -62,7 +62,9 @@ const Home = () => {
           >
             {typedText.split("\n")[0]}
             <br />
-            <span className="text-accent">{typedText.split("\n")[1]}</span>
+            <span className="text-accent" style={{ fontSize: "2rem" }}>
+              {typedText.split("\n")[1]}
+            </span>
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}

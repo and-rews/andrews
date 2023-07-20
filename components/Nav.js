@@ -1,8 +1,8 @@
 import {
   HiHome,
-  HiUser,
-  HiRectangleGroup,
-  HiViewColumns,
+  HiMiniUserGroup,
+  HiSquaresPlus,
+  HiMiniBriefcase,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from "react-icons/hi2";
@@ -12,9 +12,9 @@ import { useRouter } from "next/router";
 //  links
 export const navData = [
   { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
+  { name: "about us", path: "/about", icon: <HiMiniUserGroup /> },
+  { name: "services", path: "/services", icon: <HiSquaresPlus /> },
+  { name: "projects", path: "/work", icon: <HiMiniBriefcase /> },
   {
     name: "testimonials",
     path: "/testimonials",
