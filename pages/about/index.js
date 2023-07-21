@@ -1,16 +1,4 @@
 import React, { useState } from "react";
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  SiNextdotjs,
-  SiFramer,
-  FaWordpress,
-  FaFigma,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from "react-icons/fa";
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
@@ -19,70 +7,29 @@ import { fadeIn } from "../../variants";
 //  data
 const aboutData = [
   {
-    title: "skills",
+    title: "About Us",
     info: [
       {
-        title: "Web Development",
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
-        ],
-      },
-      {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: "About Us",
+        desc: "We are a passionate team of tech enthusiasts, dedicated to engineering the future through cutting-edge solutions. With expertise in custom software development, mobile app development, digital marketing, and cybersecurity, we navigate success together, safeguarding your digital world while empowering the digital frontier. Join us on this journey as we shape a better tomorrow, one line of code at a time.",
       },
     ],
   },
   {
-    title: "awards",
+    title: "Vision",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Vision Statement",
+        desc: "Empowering a connected world through innovative technology solutions.",
       },
     ],
   },
   {
-    title: "experience",
+    title: "Mission",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Mission Statement",
+        desc: "Delivering exceptional digital experiences and driving impactful results for our clients' success.",
       },
     ],
   },
@@ -91,7 +38,7 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="bg-primary/30 py-32 text-center h-full xl:text-left">
+    <div className="bg-primary/80 py-32 text-center h-full xl:text-left">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -102,9 +49,9 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row">
-        <div>text</div>
-        <div>
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:mt-11">
+        <div className="flex-1 flex flex-col">text</div>
+        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -113,7 +60,7 @@ const About = () => {
                   className={`${
                     index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -121,11 +68,17 @@ const About = () => {
               );
             })}
           </div>
-          <div>
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
-                <div key={itemIndex}>
-                  <div>{item.title}</div>
+                <div
+                  key={itemIndex}
+                  className="flex-1 flex flex-col max-w-max gap-x-2 text-white/60"
+                >
+                  <div className="font-bold mb-2 md:mb-0 text-white">
+                    {item.title}
+                  </div>
+                  <div>{item.desc}</div>
                 </div>
               );
             })}
