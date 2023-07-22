@@ -12,7 +12,7 @@ const aboutData = [
     info: [
       {
         title: "About Us",
-        desc: "We are a passionate team of tech enthusiasts, dedicated to engineering the future through cutting-edge solutions. With expertise in custom software development, mobile app development, digital marketing, and cybersecurity, we navigate success together, safeguarding your digital world while empowering the digital frontier. Join us on this journey as we shape a better tomorrow, one line of code at a time.",
+        desc: "We are a passionate team of tech enthusiasts, dedicated to engineering the future through cutting-edge solutions. With expertise in custom software development, mobile app development, digital marketing, and cybersecurity.",
       },
     ],
   },

@@ -24,28 +24,28 @@ function useInterval(callback, delay) {
 }
 
 const ProjectsBtn = () => {
-  const buttonAnimation = useAnimation();
+  // const buttonAnimation = useAnimation();
 
   // Define the animation steps
-  const animateButton = async () => {
-    await buttonAnimation.start({ scale: 1.1, opacity: 1 }, { duration: 0.5 });
-    await buttonAnimation.start({ scale: 1, opacity: 0.8 }, { duration: 0.5 });
-    await buttonAnimation.start({ scale: 1.1, opacity: 1 }, { duration: 0.5 });
-    await buttonAnimation.start({ scale: 1, opacity: 1 }, { duration: 0.5 });
-  };
+  // const animateButton = async () => {
+  //   await buttonAnimation.start({ scale: 1.1, opacity: 1 });
+  //   await buttonAnimation.start({ scale: 1, opacity: 0.8 });
+  //   await buttonAnimation.start({ scale: 1.1, opacity: 1 });
+  //   await buttonAnimation.start({ scale: 1, opacity: 1 });
+  // };
 
-  // Start the animation loop using useInterval
-  useInterval(() => {
-    animateButton();
-  }, 2000); // Change the interval duration as needed
+  // // Start the animation loop using useInterval
+  // useInterval(() => {
+  //   animateButton();
+  // }, 2000); // Change the interval duration as needed
 
   return (
     <div className="mx-auto xl:mx-0">
       <Link href={"/work"}>
         <motion.button
           className="flex items-center w-full h-full max-w-[161px] max-h-[148px] bg-accent pl-4 pr-4 py-2 rounded"
-          initial={{ scale: 1, opacity: 1 }}
-          animate={buttonAnimation}
+          // initial={{ scale: 1, opacity: 1 }}
+          // animate={buttonAnimation}
         >
           Contact Us <HiArrowRight className="pl-1 text-2xl" />
         </motion.button>
