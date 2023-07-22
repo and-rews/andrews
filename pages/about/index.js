@@ -39,7 +39,7 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="bg-primary/80 py-32 text-center h-full xl:text-left">
+    <div className="bg-primary/80 py-32 text-center xl:text-left">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -50,7 +50,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 xl:mt-11">
+      <div className="container mx-auto h-[100%] flex flex-col items-center xl:flex-row gap-x-6 xl:mt-11">
         <div className="flex-1 flex flex-col">
           <Image
             src={"/about1.jpg"}
@@ -58,6 +58,7 @@ const About = () => {
             height={1}
             alt="about"
             className="rounded-[20px]"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <motion.div
