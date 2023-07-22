@@ -66,17 +66,6 @@ const Home = () => {
               {typedText.split("\n")[1]}
             </span>
           </motion.h1>
-          <motion.p
-            variants={fadeIn("down", 0.3)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
-          >
-            With exceptional attention to detail and skillful artistry, I shape
-            the future, driving innovation in various sectors while bringing
-            extraordinary digital experiences to life.
-          </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
